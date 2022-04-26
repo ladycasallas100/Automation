@@ -111,7 +111,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 25-04-2022 21:28</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 25-04-2022 23:44</span>
     <br style="clear:left"/>
 </div>
 
@@ -158,9 +158,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span>
+                            <span class="outcome-icon"><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></span>
                             <span class="test-case-title">
-                                <span class="success-color">Find the quantity of adidas shoes
+                                <span class="error-color">Find the quantity of adidas shoes
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -177,12 +177,63 @@
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+                        <div class="panel-heading title="Assertion error: Expected condition failed: waiting for By.xpath: //span[contains(text(),'670.000')] to be displayed (tried for 5 second(s) with 100 milliseconds interval)Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'System info: host: 'LAPTOP-BNC3L37I', ip: '192.168.20.43', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'Driver info: driver.version: unknown">
+                            Assertion error: Expected condition failed: waiting for By.xpath: //span[contains(text(),'670.000')] to be displayed (tried for 5 second(s) with 100 milliseconds interval)Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T...
+                        </div>
+                <div><!-- Stack trace -->
+                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                            data-target="#stacktraceModal-overall">
+                        View details
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="stacktraceModal-overall" tabindex="-1" role="dialog"
+                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="stacktraceModalLabel">
+                                    java.lang.AssertionError
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                    <h5>
+                                        <pre>Expected condition failed: waiting for By.xpath: //span[contains(text(),'670.000')] to be displayed (tried for 5 second(s) with 100 milliseconds interval)<br>Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'<br>System info: host: 'LAPTOP-BNC3L37I', ip: '192.168.20.43', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_202'<br>Driver info: driver.version: unknown</pre>
+                                    </h5>
+                                    stepdefinitions.CaseOneStepDefinitions.theResultMustBeGreaterThanTwoThousand(CaseOneStepDefinitions.java
+                                    :34) <br>
+                                    ✽.the result must be greater than 2000(src/test/resources/features/caseOne.feature
+                                    :7) <br>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource4570375826694243696.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
                 <img src="094e4073c7c005a0ce6e06dc7f9a1199e7ca09886066184ad7d16488882b29d2.png" title="Given the user wants to know how many adidas shoes are registered Ebay" width="1920"/>
-                <img src="094e4073c7c005a0ce6e06dc7f9a1199e7ca09886066184ad7d16488882b29d2.png" title="Lady opens the Automation ebay" width="1920"/>
-                <img src="094e4073c7c005a0ce6e06dc7f9a1199e7ca09886066184ad7d16488882b29d2.png" title="When the user filters by shoes and brand" width="1920"/>
-                <img src="72a5a9caef889b332424ee89bae545ada7da1413b765af648e67ab0321cf5d20.png" title="Then the result must be greater than two thousand: <span class='success-color'>SUCCESS</span>" width="1920"/>
+                <img src="a5f3b490f22c66b4623a9bece4cade2e2390da01023c7dea01633eef30899377.png" title="Lady opens the Automation ebay" width="1920"/>
+                <img src="166ef777baa1657b7722c9dcebdee84487ddc3eb3018348b2128a7431f8140d1.png" title="When the user filters by shoes and brand" width="1920"/>
+                <img src="08f490502248dfcc207ebab3615549cb6c9462750039298fb446fc2204520904.png" title="Lady enters 'shoes' into search bar" width="1920"/>
+                <img src="92498d10aa77ba7ee0e89bf45b20ccf2017a3e3c0c4b798aef20a45c60ee23af.png" title="Lady clicks on button" width="1920"/>
+                <img src="95781e68d4cee8a4c4b3f8cc4ece7473359920c63f054689ac4d9bf1c8367376.png" title="Lady clicks on check" width="1920"/>
+                <img src="c08886d45e3a37b9abc1b1af4a19e1412066267d68aba30851ad083cd57868a7.png" title="Then answer: <span class='error-color'>ERROR</span>" width="1920"/>
             </div>
         </div>
 

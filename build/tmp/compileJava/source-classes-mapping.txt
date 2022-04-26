@@ -2,3 +2,9 @@ tasks/OpenUp.java
  tasks.OpenUp
 userinterface/AutomationEbay.java
  userinterface.AutomationEbay
+userinterface/SearchPage.java
+ userinterface.SearchPage
+tasks/Search.java
+ tasks.Search
+questions/Answer.java
+ questions.Answer

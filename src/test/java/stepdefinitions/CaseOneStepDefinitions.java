@@ -3,9 +3,12 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import questions.Answer;
 import tasks.OpenUp;
+import tasks.Search;
 
 public class CaseOneStepDefinitions {
     @Before
@@ -20,13 +23,14 @@ public class CaseOneStepDefinitions {
     }
 
 
-    @When("^the user filters by shoes and brand$")
-    public void theUserFiltersByShoesAndBrand() throws Exception {
+    @When("^the user filters by (.*) and brand$")
+    public void theUserFiltersByShoesAndBrand(String shoes) throws Exception {
+OnStage.theActorInTheSpotlight().attemptsTo(Search.the(shoes));
 
     }
 
-    @Then("^the result must be greater than two thousand$")
-    public void theResultMustBeGreaterThanTwoThousand() throws Exception {
-
+    @Then("^the result must be greater than (.*)$")
+    public void theResultMustBeGreaterThanTwoThousand(String question) throws Exception {
+OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Answer.toThe(question)));
     }
 }
