@@ -1,12 +1,14 @@
 package questions;
+
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 import userinterface.SearchPage;
 
-public class Answer implements Question<Boolean>{
+public class Answer implements Question<Boolean> {
     private String question;
-    public Answer(String question){
+
+    public Answer(String question) {
         this.question = question;
     }
 
@@ -17,12 +19,11 @@ public class Answer implements Question<Boolean>{
     @Override
     public Boolean answeredBy(Actor actor) {
         boolean result;
-        Double totalShoes = Text.of(SearchPage.TOTAL).viewedBy(actor).asDouble();
-        System.out.println("TOTAL DE ZAPATOS");
-        System.out.println(totalShoes);
-        if(question.equals(totalShoes)){
+        String numbStr = Text.of(SearchPage.TOTAL).viewedBy(actor).asString();
+        float totalShoes = Float.parseFloat(numbStr.replaceAll("\\.", ""));
+        if (totalShoes > Float.parseFloat(question)) {
             result = true;
-        }else{
+        } else {
             result = false;
         }
         return result;
